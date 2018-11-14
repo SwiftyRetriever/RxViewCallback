@@ -12,7 +12,7 @@ import RxSwift
 import RxCocoa
 import UIKit
 
-public typealias Parameters = (object: Any?, userInfo: [AnyHashable: Any]?)
+public typealias Parameters = (source: Any?, object: Any?, userInfo: [AnyHashable: Any]?)
 
 extension Reactive where Base: UIView {
     
@@ -25,9 +25,13 @@ extension Reactive where Base: UIView {
     
     public var callback: ControlEvent<Parameters> {
         
-        let source = delegate.methodInvoked(#selector(RxViewCallbackDelegate.callback(with:userInfo:)))
+        let source = delegate.methodInvoked(#selector(RxViewCallbackDelegate.callback(with:object:userInfo:)))
             .map { params -> Parameters in
-            return (object: params[0], userInfo: params[1] as? [AnyHashable: Any])
+                
+                let source = params[0]
+                let object = params[1]
+                let userInfo = params[2] as? [AnyHashable: Any]
+                return (source: source, object: object, userInfo: userInfo)
         }
         return ControlEvent(events: source)
     }

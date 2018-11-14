@@ -26,6 +26,7 @@ class ExmapleView: UIView {
     */
     
     @IBAction func dismissButtonClicked(_ sender: Any) {
-        rxViewCallbackDelegate?.callback?(with: "1", userInfo: nil)
+        rxViewCallback?.callback?(with: "dismiss clicked", object: 1, userInfo: nil)
+//        rxViewCallback?.callback?(with: "1", userInfo: nil)
     }
 }

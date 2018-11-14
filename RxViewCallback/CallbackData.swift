@@ -14,6 +14,7 @@ public struct CallbackUserInfoKey {
 
 public struct CallbackData<T> {
     
+    public var source: Any?
     public var object: Any?
     public var item: T?
     public var userInfo: [AnyHashable: Any]?

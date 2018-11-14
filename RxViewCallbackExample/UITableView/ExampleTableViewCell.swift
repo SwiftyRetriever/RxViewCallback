@@ -24,6 +24,7 @@ class ExampleTableViewCell: UITableViewCell {
 
     @IBAction func clickMe(_ sender: Any) {
         
-        rxViewCallbackDelegate?.callback?(with: "call back object", userInfo: nil)
+        rxViewCallback?.callback(with: "cell.click",
+                                 object: "callback object")
     }
 }

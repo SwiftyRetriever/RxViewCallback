@@ -28,7 +28,6 @@ class ExampleViewController: UIViewController {
             print("click me responsed. data: \(data)")
             print("data.object: \(data.object ?? "")")
             print("data.userInfo: \(data.userInfo ?? [:])")
-            print("item: \(data.item ?? 0)")
             
             self.dismiss(animated: true, completion: nil)
             

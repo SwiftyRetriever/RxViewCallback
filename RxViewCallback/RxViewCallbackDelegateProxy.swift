@@ -17,7 +17,7 @@ extension UIView {
         static var delegate = "com.zevwings.eventHandler.delegate"
     }
     
-    public weak var rxViewCallbackDelegate: RxViewCallbackDelegate? {
+    public weak var rxViewCallback: RxViewCallbackDelegate? {
         get {
             return objc_getAssociatedObject(self, &_StorageKey.delegate) as? RxViewCallbackDelegate
         }
@@ -46,11 +46,11 @@ open class RxViewCallbackDelegateProxy
     }
     
     public static func currentDelegate(for object: UIView) -> RxViewCallbackDelegate? {
-        return object.rxViewCallbackDelegate
+        return object.rxViewCallback
     }
     
     public static func setCurrentDelegate(_ delegate: RxViewCallbackDelegate?, to object: UIView) {
-        return object.rxViewCallbackDelegate = delegate
+        return object.rxViewCallback = delegate
     }
 }
 

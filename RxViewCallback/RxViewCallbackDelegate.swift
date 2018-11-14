@@ -10,5 +10,12 @@ import UIKit
 
 // 事件相响应链回掉代理
 @objc public protocol RxViewCallbackDelegate: AnyObject {
-    @objc optional func callback(with object: Any?, userInfo: [AnyHashable: Any]?)
+    @objc optional func callback(with source: Any?, object: Any?, userInfo: [AnyHashable: Any]?)
+}
+
+public extension RxViewCallbackDelegate {
+    
+    func callback(with source: Any? = nil, object: Any? = nil) {
+        callback?(with: source, object: object, userInfo: nil)
+    }
 }

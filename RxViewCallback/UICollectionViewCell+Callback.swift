@@ -31,6 +31,7 @@ extension Reactive where Base: UICollectionReusableView {
             userInfo[CallbackUserInfoKey.indexPath] = ip
             
             var data = CallbackData<T>()
+            data.source = params.source
             data.object = params.object
             data.userInfo = userInfo
             data.item = try superview.rx.model(at: ip)

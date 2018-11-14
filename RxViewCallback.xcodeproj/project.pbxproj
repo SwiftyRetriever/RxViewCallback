@@ -14,7 +14,7 @@
 		4DA81527219BB0AB00646764 /* RxViewCallbackDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA81520219BB0AB00646764 /* RxViewCallbackDelegateProxy.swift */; };
 		4DA81528219BB0AB00646764 /* RxViewCallbackDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA81521219BB0AB00646764 /* RxViewCallbackDelegate.swift */; };
 		4DA81529219BB0AB00646764 /* UIView+Callback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA81522219BB0AB00646764 /* UIView+Callback.swift */; };
-		4DA8152A219BB0AB00646764 /* RxViewCallbackData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA81523219BB0AB00646764 /* RxViewCallbackData.swift */; };
+		4DA8152A219BB0AB00646764 /* CallbackData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA81523219BB0AB00646764 /* CallbackData.swift */; };
 		4DA8152B219BB0AB00646764 /* UITableViewHeaderFooterView+Callback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA81524219BB0AB00646764 /* UITableViewHeaderFooterView+Callback.swift */; };
 		4DA8152C219BB0AB00646764 /* UITableViewCell+Callback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA81525219BB0AB00646764 /* UITableViewCell+Callback.swift */; };
 		4DA81530219BB85100646764 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA8152E219BB85100646764 /* RxSwift.framework */; };
@@ -87,7 +87,7 @@
 		4DA81520219BB0AB00646764 /* RxViewCallbackDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxViewCallbackDelegateProxy.swift; sourceTree = "<group>"; };
 		4DA81521219BB0AB00646764 /* RxViewCallbackDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxViewCallbackDelegate.swift; sourceTree = "<group>"; };
 		4DA81522219BB0AB00646764 /* UIView+Callback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Callback.swift"; sourceTree = "<group>"; };
-		4DA81523219BB0AB00646764 /* RxViewCallbackData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxViewCallbackData.swift; sourceTree = "<group>"; };
+		4DA81523219BB0AB00646764 /* CallbackData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallbackData.swift; sourceTree = "<group>"; };
 		4DA81524219BB0AB00646764 /* UITableViewHeaderFooterView+Callback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewHeaderFooterView+Callback.swift"; sourceTree = "<group>"; };
 		4DA81525219BB0AB00646764 /* UITableViewCell+Callback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Callback.swift"; sourceTree = "<group>"; };
 		4DA8152E219BB85100646764 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 				4DA81508219BB08000646764 /* RxViewCallback.h */,
 				4DA81521219BB0AB00646764 /* RxViewCallbackDelegate.swift */,
 				4DA81520219BB0AB00646764 /* RxViewCallbackDelegateProxy.swift */,
-				4DA81523219BB0AB00646764 /* RxViewCallbackData.swift */,
+				4DA81523219BB0AB00646764 /* CallbackData.swift */,
 				4DA81522219BB0AB00646764 /* UIView+Callback.swift */,
 				4DA81525219BB0AB00646764 /* UITableViewCell+Callback.swift */,
 				4DA81524219BB0AB00646764 /* UITableViewHeaderFooterView+Callback.swift */,
@@ -381,7 +381,7 @@
 				4DA81529219BB0AB00646764 /* UIView+Callback.swift in Sources */,
 				4DA81526219BB0AB00646764 /* UICollectionViewCell+Callback.swift in Sources */,
 				4DA81527219BB0AB00646764 /* RxViewCallbackDelegateProxy.swift in Sources */,
-				4DA8152A219BB0AB00646764 /* RxViewCallbackData.swift in Sources */,
+				4DA8152A219BB0AB00646764 /* CallbackData.swift in Sources */,
 				4DA8152B219BB0AB00646764 /* UITableViewHeaderFooterView+Callback.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
