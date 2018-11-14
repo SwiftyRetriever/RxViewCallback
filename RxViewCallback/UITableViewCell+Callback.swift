@@ -12,8 +12,6 @@ import RxSwift
 import RxCocoa
 import UIKit
 
-
-
 // MARK: - Rx
 
 extension Reactive where Base: UITableViewCell {

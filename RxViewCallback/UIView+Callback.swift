@@ -12,8 +12,6 @@ import RxSwift
 import RxCocoa
 import UIKit
 
-// MARK: - UIView
-
 public typealias Parameters = (object: Any?, userInfo: [AnyHashable: Any]?)
 
 extension Reactive where Base: UIView {
