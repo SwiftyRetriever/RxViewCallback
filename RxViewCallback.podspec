@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.version      = "0.0.1"
   s.summary      = "A rx tools for view, easy to use callback with view."
   s.description  = <<-DESC
-                    make esting view callback clear.
+                    A rx tools for view, easy to use callback with view
                    DESC
 
   s.homepage     = "https://github.com/zevwings/RxViewCallback"
@@ -21,8 +21,10 @@ Pod::Spec.new do |s|
   s.author             = { "zevwings" => "zev.wings@gmail.com" }
   s.platform     = :ios, "9.0"
   s.source       = { :git => "https://github.com/zevwings/RxViewCallback.git", :tag => "#{s.version}" }
-  s.source_files = "ZVRefreshing/**/*.swift", "ZVRefreshing/ZVRefreshing.h"
-  s.source_files  = "RxViewCallback/**/*.{swift, h}"
+  s.source_files = "RxViewCallback/**/*.swift", "RxViewCallback/RxViewCallback.h"
   s.requires_arc = true
+
+  s.dependency 'RxSwift'
+  s.dependency 'RxCocoa'
 
 end
