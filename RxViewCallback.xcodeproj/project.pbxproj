@@ -10,6 +10,13 @@
 		4DA8150F219BB08000646764 /* RxViewCallback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA81505219BB08000646764 /* RxViewCallback.framework */; };
 		4DA81514219BB08000646764 /* RxViewCallbackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA81513219BB08000646764 /* RxViewCallbackTests.m */; };
 		4DA81516219BB08000646764 /* RxViewCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DA81508219BB08000646764 /* RxViewCallback.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4DA81526219BB0AB00646764 /* UICollectionViewCell+Callback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA8151F219BB0AB00646764 /* UICollectionViewCell+Callback.swift */; };
+		4DA81527219BB0AB00646764 /* RxViewCallbackDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA81520219BB0AB00646764 /* RxViewCallbackDelegateProxy.swift */; };
+		4DA81528219BB0AB00646764 /* RxViewCallbackDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA81521219BB0AB00646764 /* RxViewCallbackDelegate.swift */; };
+		4DA81529219BB0AB00646764 /* UIView+Callback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA81522219BB0AB00646764 /* UIView+Callback.swift */; };
+		4DA8152A219BB0AB00646764 /* RxViewCallbackData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA81523219BB0AB00646764 /* RxViewCallbackData.swift */; };
+		4DA8152B219BB0AB00646764 /* UITableViewHeaderFooterView+Callback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA81524219BB0AB00646764 /* UITableViewHeaderFooterView+Callback.swift */; };
+		4DA8152C219BB0AB00646764 /* UITableViewCell+Callback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA81525219BB0AB00646764 /* UITableViewCell+Callback.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +36,13 @@
 		4DA8150E219BB08000646764 /* RxViewCallbackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxViewCallbackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA81513219BB08000646764 /* RxViewCallbackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RxViewCallbackTests.m; sourceTree = "<group>"; };
 		4DA81515219BB08000646764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DA8151F219BB0AB00646764 /* UICollectionViewCell+Callback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Callback.swift"; sourceTree = "<group>"; };
+		4DA81520219BB0AB00646764 /* RxViewCallbackDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxViewCallbackDelegateProxy.swift; sourceTree = "<group>"; };
+		4DA81521219BB0AB00646764 /* RxViewCallbackDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxViewCallbackDelegate.swift; sourceTree = "<group>"; };
+		4DA81522219BB0AB00646764 /* UIView+Callback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Callback.swift"; sourceTree = "<group>"; };
+		4DA81523219BB0AB00646764 /* RxViewCallbackData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxViewCallbackData.swift; sourceTree = "<group>"; };
+		4DA81524219BB0AB00646764 /* UITableViewHeaderFooterView+Callback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewHeaderFooterView+Callback.swift"; sourceTree = "<group>"; };
+		4DA81525219BB0AB00646764 /* UITableViewCell+Callback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Callback.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +85,13 @@
 		4DA81507219BB08000646764 /* RxViewCallback */ = {
 			isa = PBXGroup;
 			children = (
+				4DA81523219BB0AB00646764 /* RxViewCallbackData.swift */,
+				4DA81521219BB0AB00646764 /* RxViewCallbackDelegate.swift */,
+				4DA81520219BB0AB00646764 /* RxViewCallbackDelegateProxy.swift */,
+				4DA8151F219BB0AB00646764 /* UICollectionViewCell+Callback.swift */,
+				4DA81525219BB0AB00646764 /* UITableViewCell+Callback.swift */,
+				4DA81524219BB0AB00646764 /* UITableViewHeaderFooterView+Callback.swift */,
+				4DA81522219BB0AB00646764 /* UIView+Callback.swift */,
 				4DA81508219BB08000646764 /* RxViewCallback.h */,
 				4DA81509219BB08000646764 /* Info.plist */,
 			);
@@ -147,6 +168,7 @@
 				TargetAttributes = {
 					4DA81504219BB08000646764 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					4DA8150D219BB08000646764 = {
 						CreatedOnToolsVersion = 10.1;
@@ -193,6 +215,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DA81528219BB0AB00646764 /* RxViewCallbackDelegate.swift in Sources */,
+				4DA8152C219BB0AB00646764 /* UITableViewCell+Callback.swift in Sources */,
+				4DA81529219BB0AB00646764 /* UIView+Callback.swift in Sources */,
+				4DA81526219BB0AB00646764 /* UICollectionViewCell+Callback.swift in Sources */,
+				4DA81527219BB0AB00646764 /* RxViewCallbackDelegateProxy.swift in Sources */,
+				4DA8152A219BB0AB00646764 /* RxViewCallbackData.swift in Sources */,
+				4DA8152B219BB0AB00646764 /* UITableViewHeaderFooterView+Callback.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +365,7 @@
 		4DA8151A219BB08000646764 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -344,6 +374,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = RxViewCallback/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -352,6 +383,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zevwings.RxViewCallback;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -359,6 +392,7 @@
 		4DA8151B219BB08000646764 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -367,6 +401,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = RxViewCallback/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -375,6 +410,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zevwings.RxViewCallback;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -382,6 +418,7 @@
 		4DA8151D219BB08000646764 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RxViewCallbackTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -398,6 +435,7 @@
 		4DA8151E219BB08000646764 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RxViewCallbackTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
