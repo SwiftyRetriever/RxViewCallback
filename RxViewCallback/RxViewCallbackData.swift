@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct CallbackUserInfoKey {
-    static let indexPath = "com.zevwings.rx.userinfo.indexPath"
+public struct CallbackUserInfoKey {
+    public static let indexPath = "com.zevwings.rx.userinfo.indexPath"
 }
 
 public struct CallbackData<T> {
