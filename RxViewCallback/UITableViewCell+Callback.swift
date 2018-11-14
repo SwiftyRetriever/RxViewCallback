@@ -12,21 +12,29 @@ import RxSwift
 import RxCocoa
 import UIKit
 
+
+
 // MARK: - Rx
 
 extension Reactive where Base: UITableViewCell {
     
-    public func callback<T>(_ itemType: T.Type) -> ControlEvent<RxTableViewCallbackData<T>> {
+    public func callback<T>(_ itemType: T.Type) -> ControlEvent<CallbackData<T>> {
         
-        let source: Observable<RxTableViewCallbackData<T>> = callback.flatMap { [weak view = self.base as UITableViewCell] data -> Observable<RxTableViewCallbackData<T>> in
+        let source: Observable<CallbackData<T>> = callback.flatMap {
+            [weak view = self.base as UITableViewCell] params -> Observable<CallbackData<T>> in
             
-            guard let data = data as? RxTableViewCallbackData<T>,
-                let view = view,
-                let superview = view.superview as? UICollectionView,
+            guard let view = view,
+                let superview = view.superview as? UITableView,
                 let ip = view.indexPath else {
                     return Observable.empty()
             }
             
+            var userInfo = params.userInfo ?? [:]
+            userInfo[CallbackUserInfoKey.indexPath] = ip
+            
+            var data = CallbackData<T>()
+            data.object = params.object
+            data.userInfo = userInfo
             data.item = try superview.rx.model(at: ip)
             
             return Observable.just(data)

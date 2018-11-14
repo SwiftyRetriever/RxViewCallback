@@ -8,31 +8,13 @@
 
 import Foundation
 
-public protocol CallbackEnventType {}
+struct CallbackUserInfoKey {
+    static let indexPath = "com.zevwings.rx.userinfo.indexPath"
+}
 
-// MARK: - Base
-
-open class RxViewCallbackData: NSObject {
+public struct CallbackData<T> {
     
-    var event: CallbackEnventType?
-    
-    public init(event: CallbackEnventType? = nil) {
-        super.init()
-        self.event = event
-    }
+    public var object: Any?
+    public var item: T?
+    public var userInfo: [AnyHashable: Any]?
 }
-
-// MARK: - UICollectionView
-
-open class RxCollectionViewCallbackData<T>: RxViewCallbackData {
-    var indexPath: IndexPath?
-    var item: T?
-}
-
-// MARK: - UITableView
-
-open class RxTableViewCallbackData<T>: RxViewCallbackData {
-    var indexPath: IndexPath?
-    var item: Any?
-}
-

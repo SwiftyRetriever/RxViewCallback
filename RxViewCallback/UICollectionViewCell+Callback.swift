@@ -16,17 +16,23 @@ import UIKit
 
 extension Reactive where Base: UICollectionReusableView {
 
-    public func callback<T>(_ itemType: T.Type) -> ControlEvent<RxCollectionViewCallbackData<T>> {
+    public func callback<T>(_ itemType: T.Type) -> ControlEvent<CallbackData<T>> {
 
-        let source: Observable<RxCollectionViewCallbackData<T>> = callback.flatMap { [weak view = self.base as UICollectionReusableView] data -> Observable<RxCollectionViewCallbackData<T>> in
+        let source: Observable<CallbackData<T>> = callback.flatMap {
+            [weak view = self.base as UICollectionReusableView] params -> Observable<CallbackData<T>> in
 
-            guard let data = data as? RxCollectionViewCallbackData<T>,
-                let view = view,
+            guard let view = view,
                 let superview = view.superview as? UICollectionView,
                 let ip = view.indexPath else {
-                return Observable.empty()
+                    return Observable.empty()
             }
-
+            
+            var userInfo = params.userInfo ?? [:]
+            userInfo[CallbackUserInfoKey.indexPath] = ip
+            
+            var data = CallbackData<T>()
+            data.object = params.object
+            data.userInfo = userInfo
             data.item = try superview.rx.model(at: ip)
             
             return Observable.just(data)

@@ -12,6 +12,10 @@ import RxSwift
 import RxCocoa
 import UIKit
 
+// MARK: - UIView
+
+public typealias Parameters = (object: Any?, userInfo: [AnyHashable: Any]?)
+
 extension Reactive where Base: UIView {
     
     /// Reactive wrapper for `delegate`.
@@ -21,16 +25,25 @@ extension Reactive where Base: UIView {
         return RxViewCallbackDelegateProxy.proxy(for: base)
     }
     
-    public var callback: ControlEvent<RxViewCallbackData> {
+    public var callback: ControlEvent<Parameters> {
         
-        let source = delegate.methodInvoked(#selector(RxViewCallbackDelegate.callback(with:))).map { a -> RxViewCallbackData in
-
-            let object = a[0]
-            guard let returnValue = object as? RxViewCallbackData else {
-                throw RxCocoaError.castingError(object: object, targetType: RxViewCallbackData.self)
-            }
+        let source = delegate.methodInvoked(#selector(RxViewCallbackDelegate.callback(with:userInfo:)))
+            .map { params -> Parameters in
+            return (object: params[0], userInfo: params[1] as? [AnyHashable: Any])
+        }
+        return ControlEvent(events: source)
+    }
+    
+    public func callback<T>(_ itemType: T.Type) -> ControlEvent<CallbackData<T>> {
+        
+        let source: Observable<CallbackData<T>> = callback.flatMap {
+            params -> Observable<CallbackData<T>> in
             
-            return returnValue
+            var data = CallbackData<T>()
+            data.object = params.object
+            data.userInfo = params.userInfo
+            data.item = params.object as? T
+            return Observable.just(data)
         }
         
         return ControlEvent(events: source)

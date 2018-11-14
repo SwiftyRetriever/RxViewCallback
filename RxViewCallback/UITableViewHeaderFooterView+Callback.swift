@@ -16,19 +16,25 @@ import UIKit
 
 extension Reactive where Base: UITableViewHeaderFooterView {
     
-    public func callback<T>(_ itemType: T.Type) -> ControlEvent<RxTableViewCallbackData<T>> {
+    public func callback<T>(_ itemType: T.Type) -> ControlEvent<CallbackData<T>> {
         
-        let source: Observable<RxTableViewCallbackData<T>> = callback.flatMap { [weak view = self.base as UITableViewHeaderFooterView] data -> Observable<RxTableViewCallbackData<T>> in
+        let source: Observable<CallbackData<T>> = callback.flatMap {
+            [weak view = self.base as UITableViewHeaderFooterView] params -> Observable<CallbackData<T>> in
             
-            guard let data = data as? RxTableViewCallbackData<T>,
-                let view = view,
-                let superview = view.superview as? UICollectionView,
+            guard let view = view,
+                let superview = view.superview as? UITableView,
                 let ip = view.indexPath else {
                     return Observable.empty()
             }
             
-            data.item = try superview.rx.model(at: ip)
+            var userInfo = params.userInfo ?? [:]
+            userInfo[CallbackUserInfoKey.indexPath] = ip
             
+            var data = CallbackData<T>()
+            data.object = params.object
+            data.userInfo = userInfo
+            data.item = try superview.rx.model(at: ip)
+
             return Observable.just(data)
         }
         
