@@ -23,7 +23,7 @@ class ExampleViewController: UIViewController {
         }
         
         exampleView.frame = view.frame
-        exampleView.rx.setCallbackDelegate(self).disposed(by: disposeBag)
+        
         exampleView.rx.callback(Int.self).subscribe(onNext: { data in
             print("click me responsed. data: \(data)")
             print("data.object: \(data.object ?? "")")

@@ -26,8 +26,10 @@ class ExampleTableViewController: UITableViewController {
             [unowned self] ds, tv, ip, item in
             
             let cell = tv.dequeueReusableCell(withIdentifier: "ExampleTableViewCell") as! ExampleTableViewCell
-//            cell.textLabel?.text = "Item \(item)"
-            cell.rx.setCallbackDelegate(self, indexPath: ip).disposed(by: self.disposeBag)
+            
+            // 必须设置 indexPath 否则无法回调
+            cell.indexPath = ip
+            
             cell.rx.callback(String.self).subscribe(onNext: { data in
                 
                 print("click me responsed. data: \(data)")
@@ -54,6 +56,9 @@ class ExampleTableViewController: UITableViewController {
             ExampleSection(header: "Second section", items: ["3", "4"])
         ]
         
+        
+        let a = Any.self
+        print(a)
         Observable.just(sections)
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)

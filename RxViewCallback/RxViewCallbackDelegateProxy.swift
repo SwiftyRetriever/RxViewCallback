@@ -50,8 +50,6 @@ open class RxViewCallbackDelegateProxy
     }
     
     public static func setCurrentDelegate(_ delegate: RxViewCallbackDelegate?, to object: UIView) {
-        
-        if object.rxViewCallback != nil { object.rxViewCallback = nil }
         return object.rxViewCallback = delegate
     }
 }
