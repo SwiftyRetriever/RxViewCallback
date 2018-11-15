@@ -27,8 +27,8 @@ class ExampleTableViewController: UITableViewController {
             
             let cell = tv.dequeueReusableCell(withIdentifier: "ExampleTableViewCell") as! ExampleTableViewCell
             
-            // 必须设置 indexPath 否则无法回调
-            cell.indexPath = ip
+            // 需要获取当前单元格得数据时需要设置cell.indexPath属性
+            // cell.indexPath = ip
             
             cell.rx.callback(String.self).subscribe(onNext: { data in
                 
