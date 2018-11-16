@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D278255219E5ADA005EEC81 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D278253219E5AD9005EEC81 /* Differentiator.framework */; };
+		4D278256219E5ADA005EEC81 /* Differentiator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D278253219E5AD9005EEC81 /* Differentiator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D278257219E5ADA005EEC81 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D278254219E5ADA005EEC81 /* RxDataSources.framework */; };
+		4D278258219E5ADA005EEC81 /* RxDataSources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D278254219E5ADA005EEC81 /* RxDataSources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4DA8150F219BB08000646764 /* RxViewCallback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA81505219BB08000646764 /* RxViewCallback.framework */; };
 		4DA81514219BB08000646764 /* RxViewCallbackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA81513219BB08000646764 /* RxViewCallbackTests.m */; };
 		4DA81516219BB08000646764 /* RxViewCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DA81508219BB08000646764 /* RxViewCallback.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -32,10 +36,6 @@
 		4DA81584219BB8D300646764 /* RxViewCallback.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA81505219BB08000646764 /* RxViewCallback.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4DA8158A219BB93900646764 /* ExampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA81589219BB93900646764 /* ExampleTableViewController.swift */; };
 		4DA8158C219BB9C700646764 /* ExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA8158B219BB9C700646764 /* ExampleTableViewCell.swift */; };
-		4DA81596219C069700646764 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA81591219C067B00646764 /* Differentiator.framework */; };
-		4DA81597219C069700646764 /* Differentiator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA81591219C067B00646764 /* Differentiator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4DA81598219C069700646764 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA81590219C067B00646764 /* RxDataSources.framework */; };
-		4DA81599219C069700646764 /* RxDataSources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA81590219C067B00646764 /* RxDataSources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4DA8159C219C079800646764 /* ExampleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA8159B219C079800646764 /* ExampleSection.swift */; };
 		4DA8159F219C0BA700646764 /* ExmapleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA8159E219C0BA700646764 /* ExmapleView.swift */; };
 		4DA815A1219C0FF900646764 /* ExmapleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DA815A0219C0FF900646764 /* ExmapleView.xib */; };
@@ -67,8 +67,8 @@
 			files = (
 				4DA81584219BB8D300646764 /* RxViewCallback.framework in Embed Frameworks */,
 				4DA81581219BB8D000646764 /* RxSwift.framework in Embed Frameworks */,
-				4DA81599219C069700646764 /* RxDataSources.framework in Embed Frameworks */,
-				4DA81597219C069700646764 /* Differentiator.framework in Embed Frameworks */,
+				4D278258219E5ADA005EEC81 /* RxDataSources.framework in Embed Frameworks */,
+				4D278256219E5ADA005EEC81 /* Differentiator.framework in Embed Frameworks */,
 				4DA8157F219BB8D000646764 /* RxCocoa.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -77,6 +77,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D278253219E5AD9005EEC81 /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
+		4D278254219E5ADA005EEC81 /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
 		4DA81505219BB08000646764 /* RxViewCallback.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxViewCallback.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA81508219BB08000646764 /* RxViewCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxViewCallback.h; sourceTree = "<group>"; };
 		4DA81509219BB08000646764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,8 +103,6 @@
 		4DA8157A219BB8BE00646764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DA81589219BB93900646764 /* ExampleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableViewController.swift; sourceTree = "<group>"; };
 		4DA8158B219BB9C700646764 /* ExampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableViewCell.swift; sourceTree = "<group>"; };
-		4DA81590219C067B00646764 /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxDataSources.framework; sourceTree = "<group>"; };
-		4DA81591219C067B00646764 /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Differentiator.framework; sourceTree = "<group>"; };
 		4DA8159B219C079800646764 /* ExampleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleSection.swift; sourceTree = "<group>"; };
 		4DA8159E219C0BA700646764 /* ExmapleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExmapleView.swift; sourceTree = "<group>"; };
 		4DA815A0219C0FF900646764 /* ExmapleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExmapleView.xib; sourceTree = "<group>"; };
@@ -132,8 +132,8 @@
 			files = (
 				4DA81583219BB8D300646764 /* RxViewCallback.framework in Frameworks */,
 				4DA81580219BB8D000646764 /* RxSwift.framework in Frameworks */,
-				4DA81598219C069700646764 /* RxDataSources.framework in Frameworks */,
-				4DA81596219C069700646764 /* Differentiator.framework in Frameworks */,
+				4D278257219E5ADA005EEC81 /* RxDataSources.framework in Frameworks */,
+				4D278255219E5ADA005EEC81 /* Differentiator.framework in Frameworks */,
 				4DA8157E219BB8D000646764 /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +144,8 @@
 		4DA814FB219BB07F00646764 = {
 			isa = PBXGroup;
 			children = (
+				4D278253219E5AD9005EEC81 /* Differentiator.framework */,
+				4D278254219E5ADA005EEC81 /* RxDataSources.framework */,
 				4DA81507219BB08000646764 /* RxViewCallback */,
 				4DA81512219BB08000646764 /* RxViewCallbackTests */,
 				4DA8156D219BB8BE00646764 /* RxViewCallbackExample */,
@@ -190,8 +192,6 @@
 		4DA8152D219BB85100646764 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4DA81590219C067B00646764 /* RxDataSources.framework */,
-				4DA81591219C067B00646764 /* Differentiator.framework */,
 				4DA8152F219BB85100646764 /* RxCocoa.framework */,
 				4DA8152E219BB85100646764 /* RxSwift.framework */,
 			);
