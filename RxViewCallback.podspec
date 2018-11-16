@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
 
   s.name         = "RxViewCallback"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "A rx tools for view, easy to use callback with view."
   s.description  = <<-DESC
                     A rx tools for view, easy to use callback with view
